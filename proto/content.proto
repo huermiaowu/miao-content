@@ -1,0 +1,86 @@
+syntax = "proto3";
+option go_package = "./pb";
+package content;
+
+import "google/api/annotations.proto";
+
+enum ErrCode {
+  NormalCode                 = 0;
+  SuccessCode                = 200;
+  ServiceErrCode             = 500;
+  ParamErrCode               = 10002;
+}
+
+message DynamicInfo {
+  uint64 Id = 1;
+  string title = 2;
+  string content = 3;
+}
+
+message PingReq {
+      string ping = 1;
+}
+
+message PingResp {
+      string pong = 1;
+}
+
+message CreateDynamicReq {
+  string title = 1;
+  string content = 2;
+  uint64 petId = 3;
+  uint64 userId = 4;
+}
+
+message CreateDynamicResp {
+  DynamicInfo dynamicInfo = 1;
+}
+
+message UpdateDynamicReq {
+  uint64 Id = 1;
+  string title = 2;
+  string content = 3;
+  uint64 petId = 4;
+  uint64 userId = 5;
+}
+
+message UpdateDynamicResp {
+  DynamicInfo dynamicInfo = 1;
+}
+
+message GetDynamicReq {
+  optional uint64 Id = 1;
+  optional string title = 2;
+  optional uint64 petId = 4;
+  optional uint64 userId = 5;
+}
+
+message GetDynamicResp {
+  repeated DynamicInfo dynamicInfo = 1;
+}
+
+service content {
+      rpc Ping(PingReq) returns (PingResp) {
+            option (google.api.http) = {
+                  get: "/api/v1/dynamic/ping"
+            };
+      };
+
+      rpc CreateDynamic(CreateDynamicReq) returns (CreateDynamicResp) {
+        option (google.api.http) = {
+          post: "/api/v1/dynamic/create"
+        };
+      }
+
+      rpc UpdateDynamic(UpdateDynamicReq) returns (UpdateDynamicResp) {
+        option (google.api.http) = {
+          post: "/api/v1/dynamic/update"
+        };
+      }
+
+      rpc GetDynamic(GetDynamicReq) returns (GetDynamicResp) {
+        option (google.api.http) = {
+          get: "/api/v1/dynamic"
+        };
+      }
+}
