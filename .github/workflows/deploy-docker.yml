@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build Image
         run: |
-          docker build -t huerni/miao-gateway:v1.0 .
+          docker build -t huerni/miao-content:v1.0 .
       - name: Login to Registry
         run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
       - name: Push Image
         run: |
-          docker push huerni/miao-gateway:v1.0
+          docker push huerni/miao-content:v1.0
