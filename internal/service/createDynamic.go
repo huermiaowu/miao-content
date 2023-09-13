@@ -1,13 +1,13 @@
 package service
 
 import (
-	"content/internal/db"
 	"context"
+	"github.com/huermiaowu/miao-content/internal/db"
 	"github.com/huerni/gmitex/pkg/errno"
 	"gorm.io/gorm"
 
-	"content/internal/svc"
-	"content/pb"
+	"github.com/huermiaowu/miao-content/internal/svc"
+	"github.com/huermiaowu/miao-content/pb"
 )
 
 type CreateDynamicService struct {

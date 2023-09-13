@@ -1,13 +1,13 @@
 package main
 
 import (
-	"content/internal/app"
-	"content/internal/config"
-	"content/internal/handler"
-	"content/internal/svc"
-	content "content/pb"
 	"context"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/huermiaowu/miao-content/internal/app"
+	"github.com/huermiaowu/miao-content/internal/config"
+	"github.com/huermiaowu/miao-content/internal/handler"
+	"github.com/huermiaowu/miao-content/internal/svc"
+	content "github.com/huermiaowu/miao-content/pb"
 	"github.com/huerni/gmitex/pkg/http/handlers"
 	"github.com/huerni/gmitex/pkg/http/response"
 	"google.golang.org/grpc"

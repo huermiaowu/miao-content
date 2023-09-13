@@ -1,11 +1,11 @@
 package app
 
 import (
-	"content/internal/config"
-	"content/internal/db"
-	"content/internal/router"
 	"context"
 	"fmt"
+	"github.com/huermiaowu/miao-content/internal/config"
+	"github.com/huermiaowu/miao-content/internal/db"
+	"github.com/huermiaowu/miao-content/internal/router"
 	"github.com/huerni/gmitex/pkg/etcd"
 	"github.com/huerni/gmitex/pkg/gw/traefik"
 	"github.com/huerni/gmitex/pkg/server/gs"

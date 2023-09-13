@@ -5,9 +5,9 @@ package handler
 import (
 	"context"
 
-	"content/internal/service"
-	"content/internal/svc"
-	"content/pb"
+	"github.com/huermiaowu/miao-content/internal/service"
+	"github.com/huermiaowu/miao-content/internal/svc"
+	"github.com/huermiaowu/miao-content/pb"
 )
 
 type ContentServer struct {

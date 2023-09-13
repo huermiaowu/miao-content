@@ -1,7 +1,7 @@
 package db
 
 import (
-	"content/internal/config"
+	"github.com/huermiaowu/miao-content/internal/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

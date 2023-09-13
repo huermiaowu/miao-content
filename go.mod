@@ -1,4 +1,4 @@
-module content
+module github.com/huermiaowu/miao-content
 
 go 1.20
 

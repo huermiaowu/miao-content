@@ -1,6 +1,6 @@
 package svc
 
-import "content/internal/config"
+import "github.com/huermiaowu/miao-content/internal/config"
 
 type ServiceContext struct {
 	Config *config.Config
